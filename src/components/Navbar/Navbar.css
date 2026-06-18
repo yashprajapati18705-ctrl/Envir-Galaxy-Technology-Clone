@@ -1,0 +1,187 @@
+.navbar {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background: rgba(9, 9, 11, 0.75);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.navbar-container {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.logo h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.logo h2 span:first-child {
+  color: var(--text-primary);
+}
+
+.logo h2 span:last-child {
+  background: linear-gradient(
+  135deg,
+  #8b5cf6 0%,
+  #6366f1 50%,
+  #06b6d4 100%
+);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+.logo p {
+  font-size: 0.75rem;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: var(--text-secondary);
+
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+}
+
+.nav-links a {
+  position: relative;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0%;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #06b6d4
+  );
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-btn {
+  background: var(--accent);
+
+  color: white;
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+
+  transition: var(--transition);
+}
+
+.nav-btn:hover {
+  background: var(--accent-hover);
+
+  transform: translateY(-2px);
+}
+
+.hero {
+  padding-top: 180px;
+}
+
+.menu-icon {
+  display: none;
+
+  font-size: 1.5rem;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .nav-links {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    flex-direction: column;
+
+    padding: 30px;
+
+    background: #111827;
+
+    border-top: 1px solid #27272a;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition: 0.3s;
+  }
+
+}
+
+.nav-links.active {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}

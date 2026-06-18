@@ -1,0 +1,105 @@
+.background-wrapper {
+  position: fixed;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(140px);
+
+  opacity: 0.15;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+
+  background: #8b5cf6;
+
+  top: 10%;
+  left: 10%;
+
+  animation: floatOne 15s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 650px;
+  height: 650px;
+
+  background: #06b6d4;
+
+  top: 50%;
+  right: -150px;
+
+  animation: floatTwo 20s ease-in-out infinite;
+}
+
+.orb-3 {
+  width: 400px;
+  height: 400px;
+
+  background: #6366f1;
+
+  bottom: -100px;
+  left: 40%;
+
+  animation: floatThree 18s ease-in-out infinite;
+}
+
+@keyframes floatOne {
+
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(100px, -80px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+
+}
+
+@keyframes floatTwo {
+
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-120px, 100px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+
+}
+
+@keyframes floatThree {
+
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(80px, 60px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+
+}
