@@ -30,7 +30,7 @@ function Navbar() {
         </ul>
 
         <button className="nav-btn">
-          Let's Talk
+          <a href="#contact">Let's Talk</a>
         </button>
 
         <div
